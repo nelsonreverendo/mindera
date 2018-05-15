@@ -1,0 +1,37 @@
+Help on module challengeB:
+
+NAME
+    challengeB - # receives a path to the matrix file as an argument and calls Adjacent class
+
+FILE
+    /Users/nelsonreverendo/Documents/Mindera/challengeB.py
+
+CLASSES
+    Adjacent
+    
+    class Adjacent
+     |  This class receives the path to a file containing a matrix and
+     |  outputs the resulting groups of adjacencies in said matrix
+     |  
+     |  Methods defined here:
+     |  
+     |  __init__(self, fname)
+     |      Method used to initialise attributes and call other necesary methods
+     |  
+     |  explore_node(self, nx, ny)
+     |      Method used to explore recursively a given node in the matrix
+     |      
+     |      :param nx: node x position (column)
+     |      :param ny: node y position (line)
+     |  
+     |  find_adjacent(self)
+     |      Method used to iterate over the matrix nodes
+     |      and explore the ones with value equal to 1
+     |  
+     |  read_from_file(self, filename)
+     |      Method used to read a 2D-matrix from a file
+     |      
+     |      :param filename: path to file
+     |      :returns matrix read from file
+
+
