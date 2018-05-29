@@ -27,10 +27,17 @@ class Adjacent:
 			self.explored.append([ny, nx])  # add to explored nodes
 			self.group.append([ny, nx])     # add to group
 
-			if ny < self.grid_y-1:  # can be explored vertically
-
-				if self.grid[ny+1][nx]:  # vertical adjacency
+			if ny == 0:  # can only be explored down
+				if self.grid[ny+1][nx]:  # vertical adjacency down
 					self.explore_node(nx=nx, ny=ny + 1)
+
+			if 0 < ny < self.grid_y-1:  # can be explored up and down
+
+				if self.grid[ny+1][nx]:  # vertical adjacency down
+					self.explore_node(nx=nx, ny=ny + 1)
+
+				if self.grid[ny-1][nx]:  # vertical adjacency up
+					self.explore_node(nx=nx, ny=ny - 1)
 
 			if nx == 0:  # can only be explored front
 
